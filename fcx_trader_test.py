@@ -21,14 +21,14 @@ def pay():
 
 @server.route('/hook')
 def webhook():
-    url=PROD_URL
+    url=https://litecash.herokuapp.com
     bot.remove_webhook()
     bot.set_webhook(url + TOKEN)
     return f"Webhook set to {url}"
 
 @server.route('/')
 def index():
-    url=TEST_URL
+    url=https://litecash.herokuapp.com
     return f"To set webhook goto to <a href='{url}hook'>{url}hook</a>"
 
 # bot.remove_webhook()
